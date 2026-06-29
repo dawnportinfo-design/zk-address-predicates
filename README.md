@@ -8,6 +8,10 @@ address expression becomes an evidence-bound referent. This repository defines
 what can be proved about that referent without revealing the underlying address,
 recipient, witness, private key, or precise private coordinate.
 
+For the cross-repository boundary, read
+[`compatibility/address-morphism-theory.md`](compatibility/address-morphism-theory.md).
+ZK verification must not upgrade an unsafe AMT resolution state.
+
 ## Core Question
 
 Can a user prove that an address is usable for a purpose without revealing the
@@ -47,6 +51,8 @@ It does not claim:
   and proof bundles.
 - `diagrams/` - Mermaid diagrams.
 - `scripts/` - local verification scripts.
+- `compatibility/` - AMT boundary notes, compatibility matrix, and shared test
+  vectors.
 
 ## Quick Start
 

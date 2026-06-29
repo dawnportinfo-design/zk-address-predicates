@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "amt-zk-compatibility-matrix-v0.1",
+  "sourceRepository": "address-morphism-theory",
+  "consumerRepository": "zk-address-predicates",
+  "states": [
+    {
+      "resolutionState": "verified",
+      "decision": "allowed",
+      "allowedPredicates": [
+        "region_membership",
+        "quality_threshold",
+        "consent_scope",
+        "freshness",
+        "not_revoked",
+        "delivery_zone_eligibility",
+        "anonymous_rate_limit"
+      ]
+    },
+    {
+      "resolutionState": "partial",
+      "decision": "limited",
+      "allowedPredicates": [
+        "quality_threshold",
+        "freshness",
+        "not_revoked",
+        "anonymous_rate_limit"
+      ]
+    },
+    {
+      "resolutionState": "ambiguous",
+      "decision": "blocked",
+      "allowedPredicates": [
+        "freshness",
+        "not_revoked"
+      ]
+    },
+    {
+      "resolutionState": "unresolved",
+      "decision": "blocked",
+      "allowedPredicates": []
+    },
+    {
+      "resolutionState": "rejected",
+      "decision": "blocked",
+      "allowedPredicates": []
+    },
+    {
+      "resolutionState": "deprecated",
+      "decision": "blocked",
+      "allowedPredicates": [
+        "freshness",
+        "not_revoked"
+      ],
+      "requirement": "successor_required"
+    },
+    {
+      "resolutionState": "disputed",
+      "decision": "policy_dependent",
+      "allowedPredicates": [
+        "freshness",
+        "not_revoked",
+        "anonymous_rate_limit"
+      ]
+    }
+  ]
+}
+

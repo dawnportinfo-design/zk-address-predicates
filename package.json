@@ -9,7 +9,7 @@
     "test": "tsx --test tests/*.test.ts",
     "verify:schemas": "node scripts/verify-schemas.cjs",
     "verify:publication-safety": "node scripts/verify-publication-safety.cjs",
-    "verify": "npm run verify:schemas && npm run test && npm run verify:publication-safety"
+    "verify": "node scripts/verify-all.cjs"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

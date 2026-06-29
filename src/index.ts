@@ -1,4 +1,5 @@
 export * from './envelope.ts';
+export * from './amt-compatibility.ts';
 export * from './issuer-trust-registry.ts';
 export * from './nullifier.ts';
 export * from './predicates.ts';
