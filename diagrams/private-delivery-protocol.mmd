@@ -1,0 +1,10 @@
+sequenceDiagram
+  participant Wallet
+  participant Merchant
+  participant Carrier
+  participant Verifier
+  Wallet->>Merchant: alias + proof bundle
+  Merchant->>Verifier: verify deliverability predicate
+  Verifier-->>Merchant: accepted / manual review / rejected
+  Wallet->>Carrier: authorized handoff material
+  Carrier-->>Wallet: receipt

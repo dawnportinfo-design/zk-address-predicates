@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agid.example/specs/zk-address-predicates/verifier-policy.schema.json",
+  "title": "ZK Address Verifier Policy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "acceptedIssuers", "acceptedPredicates", "maxAgeDays", "allowedScopes"],
+  "properties": {
+    "id": { "type": "string" },
+    "acceptedIssuers": { "type": "array", "items": { "type": "string" } },
+    "acceptedPredicates": { "type": "array", "items": { "type": "string" } },
+    "maxAgeDays": { "type": "integer", "minimum": 1 },
+    "allowedScopes": { "type": "array", "items": { "type": "string" } }
+  }
+}

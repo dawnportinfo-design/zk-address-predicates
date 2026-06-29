@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agid.example/specs/zk-address-predicates/proof-bundle.schema.json",
+  "title": "ZK Address Proof Bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "proofType", "proofSystemProfile", "publicSignals", "createdAt"],
+  "properties": {
+    "schemaVersion": { "const": "zk-address-proof-bundle-v0.1" },
+    "proofType": { "type": "string" },
+    "proofSystemProfile": { "type": "string" },
+    "publicSignals": { "$ref": "public-signals.schema.json" },
+    "createdAt": { "type": "string" }
+  }
+}

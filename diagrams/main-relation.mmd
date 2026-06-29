@@ -1,0 +1,7 @@
+flowchart LR
+  W["Private witness"] --> R["Main relation"]
+  E["AMT envelope"] --> R
+  P["Verifier policy"] --> R
+  T["Issuer trust registry"] --> R
+  R --> S["Safe public signals"]
+  R --> D["Decision"]

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agid.example/specs/zk-address-predicates/public-signals.schema.json",
+  "title": "ZK Address Public Signals",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["policyId", "predicate", "status", "commitment", "nullifier", "issuerId"],
+  "properties": {
+    "policyId": { "type": "string" },
+    "predicate": { "type": "string" },
+    "status": { "type": "string", "enum": ["accepted", "rejected", "manual_review"] },
+    "commitment": { "type": "string" },
+    "nullifier": { "type": "string" },
+    "issuerId": { "type": "string" },
+    "expiresAt": { "type": "string" }
+  }
+}

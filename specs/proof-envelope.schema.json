@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agid.example/specs/zk-address-predicates/proof-envelope.schema.json",
+  "title": "ZK Address Proof Envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "commitment", "issuerId", "credentialType", "proofScope", "freshnessRoot", "revocationRoot"],
+  "properties": {
+    "schemaVersion": { "const": "zk-address-proof-envelope-v0.1" },
+    "commitment": { "type": "string", "pattern": "^commit_[a-zA-Z0-9_-]{16,}$" },
+    "issuerId": { "type": "string", "minLength": 3 },
+    "credentialType": { "type": "string", "enum": ["address-region", "address-quality", "deliverability", "consent-scope"] },
+    "proofScope": { "type": "string", "minLength": 3 },
+    "freshnessRoot": { "type": "string", "minLength": 8 },
+    "revocationRoot": { "type": "string", "minLength": 8 }
+  }
+}

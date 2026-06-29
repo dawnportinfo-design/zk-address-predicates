@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agid.example/specs/zk-address-predicates/issuer-trust-registry.schema.json",
+  "title": "ZK Address Issuer Trust Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["issuers"],
+  "properties": {
+    "issuers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "acceptedCredentialTypes", "allowedPredicates", "auditStatus"],
+        "properties": {
+          "id": { "type": "string" },
+          "acceptedCredentialTypes": { "type": "array", "items": { "type": "string" } },
+          "allowedPredicates": { "type": "array", "items": { "type": "string" } },
+          "auditStatus": { "type": "string", "enum": ["unaudited", "reviewed", "audited"] }
+        }
+      }
+    }
+  }
+}
