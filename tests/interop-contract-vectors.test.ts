@@ -21,7 +21,7 @@ const fixture = JSON.parse(fs.readFileSync(fixturePath, 'utf8')) as {
 };
 
 test('ZK conformance reads shared interop vectors', () => {
-  assert.ok(fixture.vectors.length >= 3);
+  assert.ok(fixture.vectors.length >= 4);
 });
 
 test('ZK compatibility accepts verified postal-equivalent proof request', () => {
@@ -40,4 +40,12 @@ test('ZK compatibility blocks ambiguous precise delivery request', () => {
   const vector = fixture.vectors.find((item) => item.id === 'ambiguous-ai-manual-review');
   assert.ok(vector);
   assert.equal(decideAMTCompatibility(vector.amt, vector.zk.predicate), 'blocked');
+});
+
+test('ZK compatibility accepts no-postcode postal-equivalent demo after AMT verification', () => {
+  const vector = fixture.vectors.find((item) => item.id === 'no-postcode-agid-to-zk-demo');
+  assert.ok(vector);
+  assert.equal(vector.amt.resolutionState, 'verified');
+  assert.equal(vector.zk.predicate, 'postal_equivalent_membership');
+  assert.equal(decideAMTCompatibility(vector.amt, vector.zk.predicate), 'allowed');
 });
