@@ -17,6 +17,8 @@ Shared schemas, types, and cross-layer test vectors live in
 The paper chapter `paper/20-amt-state-guard-and-interoperability-contracts.md`
 states the AMT state guard, public-signal discipline, nullifier scope, and
 proof-bundle compatibility matrix.
+For grant and public-good review, read
+[`grant-readiness/adoption-readiness.md`](grant-readiness/adoption-readiness.md).
 
 ## Core Question
 
