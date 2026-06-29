@@ -14,6 +14,9 @@ ZK verification must not upgrade an unsafe AMT resolution state.
 
 Shared schemas, types, and cross-layer test vectors live in
 [`agid-interoperability-contracts`](https://github.com/dawnportinfo-design/agid-interoperability-contracts).
+The paper chapter `paper/20-amt-state-guard-and-interoperability-contracts.md`
+states the AMT state guard, public-signal discipline, nullifier scope, and
+proof-bundle compatibility matrix.
 
 ## Core Question
 

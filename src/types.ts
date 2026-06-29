@@ -7,7 +7,8 @@ export type PredicateName =
   | 'freshness'
   | 'not_revoked'
   | 'delivery_zone_eligibility'
-  | 'anonymous_rate_limit';
+  | 'anonymous_rate_limit'
+  | 'postal_equivalent_membership';
 
 export type ProofEnvelope = {
   schemaVersion: 'zk-address-proof-envelope-v0.1';

@@ -35,6 +35,7 @@ const stateRules: Record<AMTResolutionState, { decision: AMTCompatibilityDecisio
       'not_revoked',
       'delivery_zone_eligibility',
       'anonymous_rate_limit',
+      'postal_equivalent_membership',
     ],
   },
   partial: {
@@ -81,4 +82,3 @@ export function decideAMTCompatibility(
 
   return rule.decision;
 }
-
