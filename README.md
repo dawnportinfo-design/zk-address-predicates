@@ -12,6 +12,9 @@ For the cross-repository boundary, read
 [`compatibility/address-morphism-theory.md`](compatibility/address-morphism-theory.md).
 ZK verification must not upgrade an unsafe AMT resolution state.
 
+Shared schemas, types, and cross-layer test vectors live in
+[`agid-interoperability-contracts`](https://github.com/dawnportinfo-design/agid-interoperability-contracts).
+
 ## Core Question
 
 Can a user prove that an address is usable for a purpose without revealing the
